@@ -1,0 +1,115 @@
+body, button {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    background-color: #e6e2d3;
+}
+
+#shade {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+input {
+    box-sizing: padding-box;
+    width: 100%;
+    height: 20px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    margin: 5px auto;
+    padding: 5px;
+}
+
+.show {
+    visibility: visible;
+}
+
+.hide {
+    visibility: hidden;
+}
+
+#book-list {
+    margin: auto;
+    max-width: 950px;
+    border-collapse: collapse;
+}
+
+#book-list td {
+    border: 1px solid #ddd;
+    padding: 5px;
+}
+
+#book-list thead tr td {
+    text-align: center;
+    background-color: #b6a896;
+}
+
+#book-list tr:nth-child(even) {
+    background-color: #e2decf;
+}
+
+#book-list tr:nth-child(odd) {
+    background-color: #dbd7c8;
+}
+
+#book-list button, .btn-popup {
+    border: 2px solid #b9936c;
+    background-color: transparent;
+    border-radius: 3px;
+    margin: 3px;
+    padding: 3px;
+    width: 70px;
+    height: 30px;
+    cursor: pointer;
+}
+
+#book-list button:hover {
+    background-color: #b9936c;
+    color: #e6e2d3;
+}
+
+.add-book-popup, .edit-book-popup {
+    background-color: #e6e2d3;
+    position: fixed;
+    width: 400px;
+    right: 0;
+    left: 0;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+    top: 20%;
+}
+
+.add-book-form, .edit-book-form {
+    box-sizing: padding-box;
+    width: 100%;
+}
+
+.delete-book-popup {
+    background-color: #e6e2d3;
+    position: fixed;
+    max-width: 300px;
+    right: 0;
+    left: 0;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+    top: 20%;
+    text-align: center;
+}
+
+.btn-add, .btn-cancel, .btn-save {
+    width: 100%;
+}
+
+.delete-book-popup button{
+    width: 45%;
+    display: inline-block;
+}

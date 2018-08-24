@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Book store</title>
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+</head>
+<body>
+
+<div class="content">
+    <button class="btn-popup" onclick="showAddBookPopup()">Add book</button>
+    <table id="book-list">
+        <thead>
+        <tr>
+            <td>Book name</td>
+            <td>Author</td>
+            <td>Year</td>
+            <td>Genre</td>
+            <td>Pages</td>
+            <td>Price</td>
+            <td>Amount</td>
+            <td>Publishing house</td>
+            <td>Actions</td>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Loading...</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<div id="shade" class="hide"></div>
+
+<div class="add-book-popup hide" id="add-book-popup">
+    <form class="add-book-form" onsubmit="addBook(this); return false">
+        <input type="text" name="name" placeholder="Book name" required><br>
+        <input type="text" name="author" placeholder="Author name" required><br>
+        <input type="text" name="year" pattern="[0-9]{0,4}" placeholder="Year"><br>
+        <input type="text" name="genre" placeholder="Genre"><br>
+        <input type="text" name="pages" pattern="[0-9]*" placeholder="Count of pages"><br>
+        <input type="text" name="price" pattern="[0-9]*.[0-9]*" placeholder="Price" required><br>
+        <input type="text" name="amount" pattern="[0-9]*" placeholder="Quantity in stock" required><br>
+        <input type="text" name="publisher" placeholder="Publishing house" required><br>
+        <input type="submit" value="Add" class="btn-popup btn-add">
+    </form>
+    <button class="btn-cancel btn-popup" onclick="hidePopup(this)">Cancel</button>
+</div>
+
+<div class="edit-book-popup hide" id="edit-book-popup">
+    <form class="edit-book-form" id="edit-book-form" onsubmit="saveEditedBook(this); return false">
+        <!--<input type="text" value="Name" name="name" id="edit-name" required><br>-->
+        <!--<input type="text" name="author" id="edit-author" required><br>-->
+        <!---->
+        <input type="text" name="name" id="edit-name" placeholder="Book name" required><br>
+        <input type="text" name="author" id="edit-author"  placeholder="Author name" required><br>
+        <input type="text" name="year" id="edit-year" pattern="[0-9]{0,4}" placeholder="Year"><br>
+        <input type="text" name="genre" id="edit-genre" placeholder="Genre"><br>
+        <input type="text" name="pages" id="edit-pages" pattern="[0-9]*" placeholder="Count of pages"><br>
+        <input type="text" name="price" id="edit-price" pattern="[0-9]*.[0-9]*" placeholder="Price" required><br>
+        <input type="text" name="amount" id="edit-amount" disabled><br>
+        <input type="text" name="publisher" id="edit-publisher" disabled><br>
+        <input type="submit" class="btn-popup btn-save" value="Save">
+    </form>
+    <button class="btn-cancel btn-popup" onclick="hidePopup(this)">Cancel</button>
+</div>
+
+<div class="delete-book-popup hide" id="delete-book-popup">
+    <span>Do you really want to delete book?</span>
+    <button class="btn-delete btn-popup" id="delete-book">Yes</button>
+    <button class="btn-cancel btn-popup" onclick="hidePopup(this)">No</button>
+</div>
+
+</body>
+<script src="app.js"></script>
+</html>
